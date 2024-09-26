@@ -13,6 +13,7 @@ import (
 	"encoding/pem"
 	"fmt"
 	"html/template"
+	"net"
 	"net/http"
 	"net/url"
 	"os"
@@ -347,11 +348,14 @@ func decryptRSA(privateKey string, ciphertext []byte) ([]byte, error) {
 
 func (s *Server) handlePasswordLogin(w http.ResponseWriter, r *http.Request) {
 
-	ipAddress := r.Header.Get("X-Real-IP")
+	ipAddress := r.Header.Get("X-Forwarded-For")
 	if ipAddress == "" {
-		// handle error
-		fmt.Println("X-Real-IP header is not set")
-		return
+		var err error
+		ipAddress, _, err = net.SplitHostPort(r.RemoteAddr)
+		if err != nil {
+			// handle error
+			fmt.Println("Error getting IP address:", err)
+		}
 	}
 
 	s.tokenBucketMu.Lock()
