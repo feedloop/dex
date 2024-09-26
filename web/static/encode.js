@@ -2,7 +2,7 @@ let login = document.getElementById("login").attributes;
 let password = document.getElementById("password").attributes;
 
 document
-    .querySelector("#manual-log")
+    .querySelector("#mode-log")
     .addEventListener("submit", function (event) {
         event.preventDefault();
     
