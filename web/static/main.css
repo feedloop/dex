@@ -293,7 +293,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 80vw;
 }
 
 .fullscreen {
@@ -610,7 +609,7 @@ mask {
     text-align: center;
 }
 
-#mode-log {
+#manual-log {
     width: 412px;
 }
 
