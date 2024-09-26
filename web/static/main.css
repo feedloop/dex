@@ -261,6 +261,10 @@ body {
     box-sizing: border-box;
 }
 
+#mode-log {
+    width: 100%;
+}
+
 .dex-container {
     height: 100vh;
 }
@@ -279,8 +283,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
     gap: 40px;
+    padding: 14px 0px;
+    min-height: 100vh;
 }
 
 .login-form {
@@ -398,7 +403,16 @@ body {
     align-items: flex-start;
     gap: 8px;
     align-self: stretch;
+    width: 100%;
 }
+
+/* For desktop */
+@media screen and (min-width: 1024px) {
+    .form-item {
+        width: 30rem;
+    }
+}
+
 .form-item > label {
     color: var(--dark-neutral-40, #292929);
     font-size: 14px;
