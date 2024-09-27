@@ -19,12 +19,12 @@
                 <div class="action">
                     {{ range $c := .Connectors }}
                     <div class="form">
-                        <a href="{{ $c.URL }}" target="_self" class="form-item">
+                        <a href="{{ $c.URL }}" target="_self" class="button-login-item">
                             <div class="form">
                                 <a
                                     href="{{ $c.URL }}"
                                     target="_self"
-                                    class="form-item"
+                                    class="button-login-item"
                                 >
                                     <span class="dex-btn-icon--{{ $c.Type }}">
                                         {{ if eq $c.Type "google" }}
