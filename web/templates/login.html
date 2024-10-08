@@ -30,11 +30,11 @@
                                     target="_self"
                                     class="button-login-item"
                                 >
-                                    <span class="dex-btn-icon--{{ $c.Type }}">
+                                    <span class="dex-btn-icon--{{ $c.Type }}" {{ if eq $c.Type "google" }}style="font-size: 12px;"{{ end }}>
                                         {{ if eq $c.Type "google" }}
                                         <span class="google-icon"></span>
-                                        {{ end }} Masuk Menggunakan Email {{
-                                        $c.Name }}</span
+                                        {{ end }} Masuk Menggunakan {{ $c.Name
+                                        }}</span
                                     >
                                     {{ if eq $c.Type "local" }}
                                     <div class="strip-or">
