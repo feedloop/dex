@@ -595,7 +595,9 @@
 
             <div class="approval-content-2">
                 {{ if .Scopes }}
-                <div class="dex-subtle-text font-bold">{{ .Client }} would like to:</div>
+                <div class="dex-subtle-text font-bold">
+                    {{ .Client }} would like to:
+                </div>
                 <ul class="dex-list">
                     {{ range $scope := .Scopes }}
                     <li>{{ $scope }}</li>
@@ -610,7 +612,7 @@
 
             <div class="approval-content-3">
                 <div class="theme-form-row">
-                    <a href="https://bridevstudio.dev.bbri.io/oauth2/sign_in">
+                    <a href="https://bridevstudio.bri.co.id/oauth2/sign_in">
                         <button type="submit" class="dex-btn-icon--google">
                             <span class="dex-btn-text">Cancel</span>
                         </button>
